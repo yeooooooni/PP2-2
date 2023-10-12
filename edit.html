@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="./bootstrap.min.css" rel="stylesheet">
+    <link href="dashboard.css" rel="stylesheet">
+
+    <script>
+        function val_check(){
+            var name = document.getElementById("bookname").value;
+            var author = document.getElementById("author").value;
+            var publisher = document.getElementById("publisher").value;
+            var year = document.getElementById("year").value;
+            if(name != "" && author != "" && publisher != "" && year != ""){
+                if(confirm("수정하시겠습니까?")){
+                    alert("수정 완료");
+                }
+                else{
+                    alert("수정 취소");
+                }
+            }
+            else{
+                alert("모든 정보를 작성해주세요!")
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">22100141 도서관</a>
+    </nav>
+    <h2>책 정보 수정</h2>
+    
+    <form action="/action_page.php"> 
+        <label for="bookname">도서명:</label>
+        <input type="text" id="bookname" value="세이노의 가르침" ><br>
+        <label for="author">저자</label>
+        <input type="text" id="author"  value="세이노(SayNo)" ><br>
+        <label for="publisher">출판사</label>
+        <input type="text" id="publisher" value="데이원 " ><br>
+        <label for="year">출판년도</label>
+        <input type="date" id="year" value="2023-03-02" ><br>
+
+        <input type="submit" value="수정" onclick="val_check()">
+    </form>
+</body>
+</html>

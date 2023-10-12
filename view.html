@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="./bootstrap.min.css" rel="stylesheet">
+    <link href="dashboard.css" rel="stylesheet">
+
+    <script>
+        function call_confirm(){
+            if(confirm("삭제하시겠습니까?")){
+                alert("삭제되었습니다.")
+            }
+            else{
+                alert("삭제가 취소되었습니다.")
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">22100141 도서관</a>
+    </nav>
+    <h2>책정보</h2>
+    
+    <p>
+        <strong>도서명</strong>
+        세이노의 가르침
+        <br>
+        <strong>저자</strong>
+        세이노(SayNo) 저자(글)
+        <br>
+        <strong>출판사</strong>
+        데이원 
+        <br>     
+        <strong>출판년도</strong>
+        2023년 03월 02일
+    </p>
+
+    <input type="button" value="edit" onclick="location.href='edit.html'">
+    <input type="button" value="delete" onclick="call_confirm()">
+</body>
+</html>
